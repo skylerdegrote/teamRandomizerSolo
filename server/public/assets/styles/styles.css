@@ -1,3 +1,6 @@
-.teams{
-    display: none;
+.group{
+    display: inline-block;
+    vertical-align: top;
+    margin:30px;
+    width:200px;
 }

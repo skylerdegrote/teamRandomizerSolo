@@ -25,11 +25,12 @@ function shuffle(array) {
     function splitTeams (array){
         $(".teams").children().remove();
         for (var i = 1; i <= teamNum; i++) {
-            $(".teams").append("<div class = 'group" + i + "'><h3>Group " + i + " </h3></div>");
+            $(".teams").append("<div class = 'group group" + i + "'><h3>Group " + i + " </h3></div>");
         }
         var teamIndex = 1;//starting at team 1
         for (var j = 0; j < array.length; j++){
             $(".group" + teamIndex).append("<p>"+studentArray[j]+"</p>");
+            $(".group" + teamIndex + ' p').last().hide().delay(200*j).slideDown();
             if(teamIndex < teamNum){//if the team index is less than total number of teams
                 teamIndex++;//switches to the next team number
             }else{
