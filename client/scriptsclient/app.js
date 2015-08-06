@@ -30,7 +30,7 @@ function shuffle(array) {
         var teamIndex = 1;//starting at team 1
         for (var j = 0; j < array.length; j++){
             $(".group" + teamIndex).append("<p>"+studentArray[j]+"</p>");
-            $(".group" + teamIndex + ' p').last().hide().delay(200*j).slideDown();
+            $(".group" + teamIndex + ' p').last().hide().delay(200*j).fadeIn();
             if(teamIndex < teamNum){//if the team index is less than total number of teams
                 teamIndex++;//switches to the next team number
             }else{
